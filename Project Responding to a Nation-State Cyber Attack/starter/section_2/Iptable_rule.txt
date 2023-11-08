@@ -1,0 +1,7 @@
+# Provide your IPtables rule to block SSH access to the attacking IP address.
+
+sudo iptables -A INPUT -p tcp --dport 22 -s 192.168.56.106/24 -j DROP
+
+
+
+

@@ -1,0 +1,21 @@
+#Provide the apache version and configuration lines to be changed 
+
+
+# Apache Version
+
+Server version: Apache/2.4.7 (Ubuntu)
+Server built:   Apr  3 2019 18:04:59
+
+# Configuration file change(Hint: the change has to be made in /etc/apache2/conf-enabled/security.conf)
+# in apache.conf
+
+ServerTokens Prod  #this will remove the version information from the server response header
+
+ServerSignature Off  #This will remove the Apache version information from error pages and any other pages served by the server
+
+After that run command sudo service apache2 restart  #to restart the Apache service.
+
+
+
+
+
